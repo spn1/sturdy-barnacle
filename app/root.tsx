@@ -1,10 +1,42 @@
+import type { ActionFunctionArgs, LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import {
   Form,
+  NavLink,
   Links,
   Meta,
+  Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
+  useNavigation,
+  useSubmit,
 } from "@remix-run/react";
+import { useEffect } from "react";
+
+import appStyles from './app.css?url';
+import tailwindStyles from './tailwind.css?url';
+
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: tailwindStyles },
+  { rel: 'stylesheet', href: appStyles }
+]
+
+/**
+ * The function that runs when an action is taken on the page
+ * i.e. Form submit, search query, etc
+ */
+// export const action = async ({ request }: ActionFunctionArgs) => {
+
+// }
+
+/**
+ * The function that runs when the page is loaded
+ * @param param Loader Function Arguments
+ */
+// export const loader = async ({ request }: LoaderFunctionArgs) => {
+
+// }
+
 
 export default function App() {
   return (
@@ -16,35 +48,14 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div id="sidebar">
-          <h1>Remix Contacts</h1>
-          <div>
-            <Form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div id="search-spinner" aria-hidden hidden={true} />
-            </Form>
-            <Form method="post">
-              <button type="submit">New</button>
-            </Form>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href={`/contacts/1`}>Your Name</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
+        <nav id='navbar'>
+          <h1>
+            Portfolio
+          </h1>
+        </nav>
+        <article id="main">
+          <Outlet />
+        </article>
         <ScrollRestoration />
         <Scripts />
       </body>
