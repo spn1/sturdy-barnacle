@@ -1,8 +1,15 @@
-html {
-  box-sizing: border-box;
+:root {
+  
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+
+.red-debug {
+  border: 1px solid red;
+}
+
+.green-debug {
+  border: 1px solid green;
+}
+
+.magenta-debug {
+  border: 1px solid magenta;
 }

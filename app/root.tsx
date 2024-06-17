@@ -1,20 +1,15 @@
-import type { ActionFunctionArgs, LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import {
-  Form,
-  NavLink,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
-  useNavigation,
-  useSubmit,
 } from "@remix-run/react";
-import { useEffect } from "react";
+import { useState, useCallback } from "react";
 
-import appStyles from './app.css?url';
-import tailwindStyles from './tailwind.css?url';
+import appStyles from '~/app.css?url';
+import tailwindStyles from '~/tailwind.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
@@ -22,7 +17,9 @@ export const links: LinksFunction = () => [
 ]
 
 /**
- * The function that runs when an action is taken on the page
+ * The function that runs when an action is taken on the page. This is a
+ * server-only function that handles mutations and fetches. If a non-GET
+ * request is made, the action is called before the `loader`.
  * i.e. Form submit, search query, etc
  */
 // export const action = async ({ request }: ActionFunctionArgs) => {
@@ -30,32 +27,51 @@ export const links: LinksFunction = () => [
 // }
 
 /**
- * The function that runs when the page is loaded
+ * The function that runs when the page is loaded. It can be used to provide data
+ * to the route when rendering. It is only ever run on the server, but when a
+ * navigation occurs on the browser, Remix calls this function with `fetch` from
+ * the client. This can technically contain server secrets, as any code that
+ * isn't used to render the UI is removed from the browser bundle.
  * @param param Loader Function Arguments
  */
 // export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 // }
 
-
+/**
+ * The component returned from the `root.tsx` file will serve as the template
+ * for every page. The component that is rendered (based on the routing) will
+ * be inserted where the <Outlet /> component is.
+ * @returns The template component for the application
+ */
 export default function App() {
+  const [theme, setTheme] = useState('light');
+
+  const changeTheme = useCallback(() => {
+    theme === 'light'
+      ? setTheme('dark')
+      : setTheme('light');
+  }, [theme])
+
   return (
-    <html lang="en">
+    <html className={theme} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="font-sans bg-sky-700">
         <nav id='navbar'>
           <h1>
             Portfolio
           </h1>
+          <button onClick={changeTheme} type="button">{theme === 'dark' ? '🌞' : '🌙'}</button>
         </nav>
-        <article id="main">
+        <main id="main">
+          {/*  */}
           <Outlet />
-        </article>
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>
