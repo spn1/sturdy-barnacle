@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import appStyles from '~/app.css?url';
 import tailwindStyles from '~/tailwind.css?url';
@@ -47,10 +47,22 @@ export const links: LinksFunction = () => [
 export default function App() {
   const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    if (window !== undefined && sessionStorage !== undefined) {
+      setTheme(
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark' 
+          : sessionStorage.getItem('theme') || 'light'
+        )
+    }
+  }, [])
+
   const changeTheme = useCallback(() => {
     theme === 'light'
       ? setTheme('dark')
       : setTheme('light');
+
+    sessionStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
   }, [theme])
 
   return (
@@ -61,9 +73,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans bg-sky-700">
-        <nav id='navbar'>
-          <h1>
+      <body className="font-sans bg-slate-300 dark:bg-slate-950 dark:text-slate-100">
+        <nav className='flex justify-between items-center p-4 h-14' id='navbar'>
+          <h1 className="font-bold text-xl">
             Portfolio
           </h1>
           <button onClick={changeTheme} type="button">{theme === 'dark' ? '🌞' : '🌙'}</button>
