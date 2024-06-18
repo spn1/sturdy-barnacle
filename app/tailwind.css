@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+Light Theme: https://colorhunt.co/palette/22283131363f76abaeeeeeee
+BG: #EEEEEE - stone-200
+FG: #222831 - zinc-800
+Accent 1: #31363F - zinc-700
+Accent 2: #76ABAE - blue-200
+
+Dark Theme: https://colorhunt.co/palette/1919192d4263c84b31ecdbba
+BG: #FA7070 - zinc-900
+FG: #FEFDED - orange-100
+Accent 1: #C6EBC5 - blue-500
+Accent 2: A1C398 - rose-500
+*/

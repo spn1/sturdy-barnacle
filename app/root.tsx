@@ -73,7 +73,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans bg-slate-300 dark:bg-slate-950 dark:text-slate-100">
+      <body className="font-sans bg-stone-200 text-zinc-800 dark:bg-zinc-900 dark:text-stone-200">
         <nav className='flex justify-between items-center p-4 h-14' id='navbar'>
           <h1 className="font-bold text-xl">
             Portfolio
