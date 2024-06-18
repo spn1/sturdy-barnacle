@@ -10,7 +10,7 @@ export const Tooltip = ({ content, children }: Props) => {
     <div className='group relative'>
       {children}
       <span
-        className="absolute top-7 left-0 w-max opacity-0 transition-opacity duration-300 py-1 px-2 group-hover:opacity-100 rounded-lg dark:bg-slate-300 dark:text-slate-900"
+        className="tooltip-arrow-top absolute top-12 left-0 w-max opacity-0 transition-opacity duration-300 py-1 px-2 group-hover:opacity-100 rounded-lg dark:bg-white dark:text-slate-900"
       >
         {content}
       </span>

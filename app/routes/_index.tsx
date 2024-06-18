@@ -13,12 +13,6 @@ export default function Index() {
           <h1 className='text-6xl font-bold'>
             Spencer Newton
           </h1>
-          <h2 className='text-3xl font-bold'>
-            Senior Software Engineer
-          </h2>
-          <h3 className='text-3xl font-bold'>
-            M.Phys Space Science and Robotics
-          </h3>
         </div>
       </header>
       <div className='p-4'>

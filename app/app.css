@@ -1,9 +1,14 @@
-.tooltip {
-  @apply invisible absolute;
-}
-
-.has-tooltip:hover .tooltip {
-  @apply visible z-50;
+.tooltip-arrow-top::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  left: 15%;
+  top: 0;
+  border: 15px solid transparent;
+  border-top: 0;
+  border-bottom: 15px solid white;
+  transform: translate(-50%, calc(-100%));
 }
 
 .red-debug {
