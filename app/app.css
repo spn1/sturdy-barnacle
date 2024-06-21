@@ -11,6 +11,28 @@
     transform: translate(-50%, calc(-100%));
 }
 
+.clip {
+    animation: circle 2s infinite;
+    clip-path: circle(75%);
+    transition: clip-path 1s;
+}
+
+.clip:hover {
+    clip-path: circle(25%);
+}
+
+@keyframes circle {
+    0% {
+        clip-path: circle(75%);
+    }
+    50% {
+        clip-path: circle(25%);
+    }
+    100% {
+        clip-path: circle(75%);
+    }
+}
+
 .red-debug {
     border: 1px solid red;
 }

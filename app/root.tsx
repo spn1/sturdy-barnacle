@@ -10,10 +10,12 @@ import { useState, useCallback, useEffect } from 'react';
 
 import appStyles from '~/app.css?url';
 import tailwindStyles from '~/tailwind.css?url';
+import customStyles from '~/styles/_index.css?url';
 
 export const links: LinksFunction = () => [
     { rel: 'stylesheet', href: tailwindStyles },
     { rel: 'stylesheet', href: appStyles },
+    { rel: 'stylesheet', href: customStyles },
 ];
 
 /**
