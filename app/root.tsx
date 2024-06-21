@@ -74,12 +74,12 @@ export default function App() {
                 <Meta />
                 <Links />
             </head>
-            <body className='font-sans bg-stone-200 text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
+            <body className='bg-stone-200 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
                 <nav
-                    className='flex justify-between items-center p-4 h-14'
+                    className='flex h-14 items-center justify-between p-4'
                     id='navbar'
                 >
-                    <h1 className='font-bold text-xl'>Portfolio</h1>
+                    <h1 className='text-xl font-bold'>Portfolio</h1>
                     <button onClick={changeTheme} type='button'>
                         {theme === 'dark' ? '🌞' : '🌙'}
                     </button>
