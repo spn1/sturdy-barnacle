@@ -15,7 +15,7 @@ export default function Index() {
             </header>
             <Waves />
             <div className='bg-zinc-800 p-4 dark:bg-stone-200'>
-                <section className='container mx-auto grid grid-cols-1 justify-center gap-4 py-10 text-xl sm:grid-cols-2 md:grid-cols-3'>
+                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-4 py-10 text-xl sm:grid-cols-2 md:grid-cols-3'>
                     {/* Experience */}
                     <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-xl dark:bg-zinc-800 dark:text-stone-200'>
                         <p>
