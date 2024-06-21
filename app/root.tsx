@@ -1,20 +1,20 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from '@remix-run/node';
 import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
-import { useState, useCallback, useEffect } from "react";
+    Links,
+    Meta,
+    Outlet,
+    Scripts,
+    ScrollRestoration,
+} from '@remix-run/react';
+import { useState, useCallback, useEffect } from 'react';
 
 import appStyles from '~/app.css?url';
 import tailwindStyles from '~/tailwind.css?url';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: tailwindStyles },
-  { rel: 'stylesheet', href: appStyles }
-]
+    { rel: 'stylesheet', href: tailwindStyles },
+    { rel: 'stylesheet', href: appStyles },
+];
 
 /**
  * The function that runs when an action is taken on the page. This is a
@@ -45,48 +45,52 @@ export const links: LinksFunction = () => [
  * @returns The template component for the application
  */
 export default function App() {
-  const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('light');
 
-  useEffect(() => {
-    if (window !== undefined && sessionStorage !== undefined) {
-      setTheme(
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark' 
-          : sessionStorage.getItem('theme') || 'light'
-        )
-    }
-  }, [])
+    useEffect(() => {
+        if (window !== undefined && sessionStorage !== undefined) {
+            setTheme(
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? 'dark'
+                    : sessionStorage.getItem('theme') || 'light'
+            );
+        }
+    }, []);
 
-  const changeTheme = useCallback(() => {
-    theme === 'light'
-      ? setTheme('dark')
-      : setTheme('light');
+    const changeTheme = useCallback(() => {
+        theme === 'light' ? setTheme('dark') : setTheme('light');
 
-    sessionStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
-  }, [theme])
+        sessionStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
+    }, [theme]);
 
-  return (
-    <html className={theme} lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body className="font-sans bg-stone-200 text-zinc-800 dark:bg-zinc-900 dark:text-stone-200">
-        <nav className='flex justify-between items-center p-4 h-14' id='navbar'>
-          <h1 className="font-bold text-xl">
-            Portfolio
-          </h1>
-          <button onClick={changeTheme} type="button">{theme === 'dark' ? '🌞' : '🌙'}</button>
-        </nav>
-        <main id="main">
-          {/*  */}
-          <Outlet />
-        </main>
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
+    return (
+        <html className={theme} lang='en'>
+            <head>
+                <meta charSet='utf-8' />
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1'
+                />
+                <Meta />
+                <Links />
+            </head>
+            <body className='font-sans bg-stone-200 text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
+                <nav
+                    className='flex justify-between items-center p-4 h-14'
+                    id='navbar'
+                >
+                    <h1 className='font-bold text-xl'>Portfolio</h1>
+                    <button onClick={changeTheme} type='button'>
+                        {theme === 'dark' ? '🌞' : '🌙'}
+                    </button>
+                </nav>
+                <main id='main'>
+                    {/*  */}
+                    <Outlet />
+                </main>
+                <ScrollRestoration />
+                <Scripts />
+            </body>
+        </html>
+    );
 }
