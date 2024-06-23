@@ -5,17 +5,18 @@ import { Waves } from '~/components/waves';
 
 export default function Index() {
     return (
-        <div className='h-dvh'>
-            <header className='bg-hero md:h-10/12 container mx-auto flex h-1/2 bg-cover bg-clip-border bg-center p-4'>
+        <div className='h-full flex-col flex justify-stretch'>
+            <header className='bg-hero container mx-auto flex bg-cover bg-clip-border bg-center p-4 h-1/2'>
                 {/* hero */}
-                <div className='flex h-full w-2/3 flex-col justify-center gap-2'>
+                <div className='flex h-full md:w-2/3 flex-col justify-center md:text-left text-center w-full gap-2'>
                     <p className='maggy text-2xl'>Hello! My name is</p>
                     <h1 className='text-6xl font-bold'>Spencer Newton</h1>
+                    <p className='maggy text-2xl'>Welcome to my portfolio ♥</p>
                 </div>
             </header>
             <Waves />
-            <div className='bg-zinc-800 p-4 dark:bg-stone-200'>
-                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-4 py-10 text-xl sm:grid-cols-2 md:grid-cols-3'>
+            <div className='bg-zinc-800 dark:bg-stone-200 h-1/2 flex flex-col justify-evenly'>
+                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-4 py-10 p-4 text-xl sm:grid-cols-2 md:grid-cols-3'>
                     {/* Experience */}
                     <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-xl dark:bg-zinc-800 dark:text-stone-200'>
                         <p>

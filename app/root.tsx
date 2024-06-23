@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import {
     Links,
     Meta,
@@ -39,6 +39,20 @@ export const links: LinksFunction = () => [
 // export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 // }
+
+export const meta: MetaFunction = () => {
+    return [
+      { title: "Spencer's Portfolio" },
+      {
+        property: "og:title",
+        content: "Spencer's Portfolio",
+      },
+      {
+        name: "description",
+        content: "A CV and portfolio of work by Spencer Newton",
+      },
+    ];
+  };
 
 /**
  * The component returned from the `root.tsx` file will serve as the template
@@ -86,7 +100,7 @@ export default function App() {
                         {theme === 'dark' ? '🌞' : '🌙'}
                     </button>
                 </nav>
-                <main id='main'>
+                <main id='main' className='h-lvh'>
                     {/*  */}
                     <Outlet />
                 </main>
