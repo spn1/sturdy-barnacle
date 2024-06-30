@@ -1,5 +1,6 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import {
+    NavLink,
     Links,
     Meta,
     Outlet,
@@ -95,7 +96,12 @@ export default function App() {
                     className='flex h-14 items-center justify-between p-4'
                     id='navbar'
                 >
-                    <h1 className='text-xl font-bold'>Portfolio</h1>
+                    <NavLink to='/' className='text-xl font-bold'>Portfolio</NavLink>
+                    <div className='text-xl divide-x flex algin-middle '>
+                        <NavLink to='/about' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>About</NavLink>
+                        <NavLink to='/portfolio' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>Portfolio</NavLink>
+                        <NavLink to='/projects' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>Projects</NavLink>
+                    </div>
                     <button onClick={changeTheme} type='button'>
                         {theme === 'dark' ? '🌞' : '🌙'}
                     </button>
