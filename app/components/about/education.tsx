@@ -1,7 +1,7 @@
 export default function Education() {
     return (
         <div className='flex flex-col gap-4 md:col-span-2 lg:col-span-3'>
-            <h2 className='border-b-2 border-solid border-stone-300 pb-2 text-4xl dark:border-zinc-800'>
+            <h2 className='border-b-2 border-solid border-sky-600 pb-2 text-4xl dark:border-red-600'>
                 Education
             </h2>
             <section>

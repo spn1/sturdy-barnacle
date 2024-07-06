@@ -20,7 +20,7 @@ export default function Index() {
                     {/* Experience */}
                     <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
-                            <span className='font-bold text-rose-600 dark:text-rose-400'>
+                            <span className='font-bold text-red-600 dark:text-rose-400'>
                                 Master of Physics & Computer Science
                             </span>
                             ,<br /> Aberystwyth University
@@ -28,7 +28,7 @@ export default function Index() {
                     </div>
                     <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
-                            <span className='font-bold text-emerald-600 dark:text-emerald-400'>
+                            <span className='font-bold text-green-600 dark:text-emerald-400'>
                                 Senior Software Engineer
                             </span>
                             <br /> at Sky, Leeds

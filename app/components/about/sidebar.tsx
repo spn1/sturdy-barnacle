@@ -1,6 +1,6 @@
 export default function Sidebar() {
     return (
-        <div className='my-10 flex w-1/3 flex-col gap-4 rounded-lg bg-zinc-800'>
+        <div className='flex w-1/3 flex-col gap-4 rounded-lg bg-stone-300 dark:bg-zinc-800'>
             <div>
                 <img
                     src='/self-ramen.jpg'
@@ -14,10 +14,10 @@ export default function Sidebar() {
                 </div>
             </div>
             <div className='flex flex-col gap-2 p-2'>
-                <h2 className='border-b-2 border-solid border-stone-300 text-2xl dark:border-zinc-800'>
+                <h2 className='border-b-2 border-solid border-sky-600 text-2xl dark:border-red-600'>
                     Skills
                 </h2>
-                <ul className='text-md border-b-2 border-solid border-stone-300 pb-2 dark:border-zinc-800'>
+                <ul className='text-md border-b-2 border-solid border-sky-600 pb-2 dark:border-red-600'>
                     <li>HTML, Javascript, CSS</li>
                     <li>React, Node, Typescript</li>
                     <li>GraphQL, REST, SQL, Docker</li>
@@ -27,7 +27,7 @@ export default function Sidebar() {
                     <li>Test Driven Development, Project Planning</li>
                     <li>Technical Leadership, Software Design</li>
                 </ul>
-                <ul>
+                <ul className='pb-2'>
                     <li>C#, .Net, C, C++</li>
                     <li>Java, Python, Unity</li>
                     <li>Fortran, Matlab, OpenCV</li>

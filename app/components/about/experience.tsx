@@ -3,7 +3,7 @@ const ExperienceSection = () => {};
 export default function Experience() {
     return (
         <div className='flex flex-col gap-6 md:col-span-2 lg:col-span-3'>
-            <h2 className='border-b-2 border-solid border-stone-300 pb-2 text-2xl dark:border-zinc-800'>
+            <h2 className='border-b-2 border-solid border-sky-600 pb-2 text-2xl dark:border-red-600'>
                 Professional Experience
             </h2>
             <section>
