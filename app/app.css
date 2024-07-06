@@ -33,6 +33,10 @@
     }
 }
 
+.fixed-to-container {
+    -webkit-transform: translateZ(0);
+}
+
 .red-debug {
     border: 1px solid red;
 }

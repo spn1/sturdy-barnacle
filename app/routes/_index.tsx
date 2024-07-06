@@ -1,24 +1,24 @@
 import { Link } from '@remix-run/react';
 
-import { Tooltip } from '~/components/tooltip';
-import { Waves } from '~/components/waves';
+import { Tooltip } from '~/components/shared/tooltip';
+import { Waves } from '~/components/home/waves';
 
 export default function Index() {
     return (
-        <div className='h-full flex-col flex justify-stretch'>
-            <header className='bg-hero container mx-auto flex bg-cover bg-clip-border bg-center p-4 h-1/2'>
+        <div className='flex h-full flex-col justify-stretch'>
+            <header className='bg-hero container mx-auto flex h-1/2 bg-cover bg-clip-border bg-center p-4'>
                 {/* hero */}
-                <div className='flex h-full md:w-2/3 flex-col justify-center md:text-left text-center w-full gap-2'>
+                <div className='flex h-full w-full flex-col justify-center gap-2 text-center md:w-2/3 md:text-left'>
                     <p className='maggy text-2xl'>Hello! My name is</p>
                     <h1 className='text-6xl font-bold'>Spencer Newton</h1>
                     <p className='maggy text-2xl'>Software Engineer</p>
                 </div>
             </header>
             <Waves />
-            <div className='bg-zinc-800 dark:bg-stone-200 h-1/2 flex flex-col justify-evenly'>
-                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-4 py-10 p-4 text-xl sm:grid-cols-2 md:grid-cols-3'>
+            <div className='flex h-1/2 flex-col justify-evenly bg-zinc-800 dark:bg-stone-200'>
+                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-4 p-4 py-10 text-xl sm:grid-cols-2 md:grid-cols-3'>
                     {/* Experience */}
-                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:shadow-stone-500 dark:bg-zinc-800 dark:text-stone-200'>
+                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
                             <span className='font-bold text-rose-600 dark:text-rose-400'>
                                 Master of Physics & Computer Science
@@ -26,7 +26,7 @@ export default function Index() {
                             ,<br /> Aberystwyth University
                         </p>
                     </div>
-                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:shadow-stone-500 dark:bg-zinc-800 dark:text-stone-200'>
+                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
                             <span className='font-bold text-emerald-600 dark:text-emerald-400'>
                                 Senior Software Engineer
@@ -34,7 +34,7 @@ export default function Index() {
                             <br /> at Sky, Leeds
                         </p>
                     </div>
-                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:shadow-stone-500 dark:bg-zinc-800 dark:text-stone-200'>
+                    <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
                             All round
                             <Tooltip content='*References available on request'>
