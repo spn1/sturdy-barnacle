@@ -5,15 +5,22 @@ export default function Education() {
                 Education
             </h2>
             <section>
-                <h3 className='text-2xl'>
-                    <span className='font-bold'>
-                        Aberystwyth University, Aberystwyth
-                    </span>{' '}
-                    -{' '}
-                    <span className='italic'>
-                        M.Phys Space Science and Robotics
-                    </span>
-                </h3>
+                <div className='flex gap-4 align-middle'>
+                    <img
+                        src='/aber-shield-color.png'
+                        alt='sky logo'
+                        className='float-left h-20 pb-2 pl-2'
+                    />
+                    <div className='grow self-center'>
+                        <h3 className='text-xl font-bold'>
+                            Aberystwyth University, Aberstwyth
+                        </h3>
+                        <h4 className='text-xl italic'>
+                            M.Phys Space Science and Robotics
+                        </h4>
+                    </div>
+                    <span className='justify-self-end'>2010 - 2015</span>
+                </div>
                 <div className='text-lg'>
                     <p>Modules included:</p>
                     <ul className='list-outside list-disc pl-4'>
