@@ -17,7 +17,7 @@ export default function Experience() {
                         that worked on various product settings journeys for
                         sky.com
                     </p>
-                    <ul className='list-inside list-disc'>
+                    <ul className='list-outside list-disc pl-4'>
                         <li>
                             Led the development of a series of product settings
                             journeys for a brand new Sky product, working with
@@ -61,7 +61,7 @@ export default function Experience() {
                         to hlep both customers and call-center agents diagnose
                         and fix issues.
                     </p>
-                    <ul className='list-inside list-disc'>
+                    <ul className='list-outside list-disc pl-4'>
                         <li>
                             Collaborated with other developers to implement
                             features for the Sky customer help website. Included
@@ -92,16 +92,14 @@ export default function Experience() {
             <section>
                 <h3 className='text-2xl'>
                     <span className='font-bold'>Credit Suisse, Zurich</span> -{' '}
-                    <span className='italic'>
-                        IT Consultant, Software Developer
-                    </span>
+                    <span className='italic'>Software Developer</span>
                 </h3>
                 <div className='text-lg'>
                     <p>
                         Developed complex financial software using different C#,
                         WCF, Excel, and SQL.
                     </p>
-                    <ul className='list-inside list-disc'>
+                    <ul className='list-outside list-disc pl-4'>
                         <li>
                             Worked on augmenting software procided by an
                             external software company.

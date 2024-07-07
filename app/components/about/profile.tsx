@@ -1,6 +1,6 @@
 export default function Profile() {
     return (
-        <div className='flex flex-col gap-4 md:row-span-2 lg:row-span-3'>
+        <div className='flex flex-col gap-4'>
             <h2 className='border-b-2 border-solid border-sky-600 pb-2 text-2xl dark:border-red-600'>
                 Profile
             </h2>

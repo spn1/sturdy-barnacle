@@ -16,7 +16,7 @@ export default function Education() {
                 </h3>
                 <div className='text-lg'>
                     <p>Modules included:</p>
-                    <ul className='list-inside list-disc'>
+                    <ul className='list-outside list-disc pl-4'>
                         <li>
                             Disertation - Passive Structured Light for Planetary
                             Landers (Computer Vision based software project, C++
