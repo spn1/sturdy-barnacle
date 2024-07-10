@@ -20,6 +20,7 @@ export default function Sidebar() {
                 <ul className='text-md'>
                     <li>HTML, Javascript, CSS</li>
                     <li>React, Node, Typescript</li>
+                    <li>NextJS, Remix, Apollo</li>
                     <li>SASS, Styled Components, Tailwind</li>
                     <li>GraphQL, REST, SQL, Docker</li>
                     <li>CMS Systems (Contentstack)</li>
