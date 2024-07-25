@@ -43,17 +43,17 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => {
     return [
-      { title: "Spencer's Portfolio" },
-      {
-        property: "og:title",
-        content: "Spencer's Portfolio",
-      },
-      {
-        name: "description",
-        content: "A CV and portfolio of work by Spencer Newton",
-      },
+        { title: "Spencer's Portfolio" },
+        {
+            property: 'og:title',
+            content: "Spencer's Portfolio",
+        },
+        {
+            name: 'description',
+            content: 'A CV and portfolio of work by Spencer Newton',
+        },
     ];
-  };
+};
 
 /**
  * The component returned from the `root.tsx` file will serve as the template
@@ -96,11 +96,26 @@ export default function App() {
                     className='flex h-14 items-center justify-between p-4'
                     id='navbar'
                 >
-                    <NavLink to='/' className='text-xl font-bold'>Portfolio</NavLink>
-                    <div className='text-xl divide-x flex algin-middle '>
-                        <NavLink to='/about' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>About</NavLink>
-                        <NavLink to='/portfolio' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>Portfolio</NavLink>
-                        <NavLink to='/projects' className={'px-6 dark:border-stone-200 px-6 border-zinc-800'}>Projects</NavLink>
+                    <NavLink to='/' className='text-xl font-bold'>
+                        Spencer Newton
+                    </NavLink>
+                    <div className='algin-middle flex divide-x text-xl'>
+                        <NavLink
+                            to='/profile'
+                            className={
+                                'border-zinc-800 px-6 dark:border-stone-200'
+                            }
+                        >
+                            Profile
+                        </NavLink>
+                        <NavLink
+                            to='/portfolio'
+                            className={
+                                'border-zinc-800 px-6 dark:border-stone-200'
+                            }
+                        >
+                            Portfolio
+                        </NavLink>
                     </div>
                     <button onClick={changeTheme} type='button'>
                         {theme === 'dark' ? '🌞' : '🌙'}

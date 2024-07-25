@@ -1,7 +1,7 @@
 export default function Profile() {
     return (
         <div className='flex flex-col gap-4'>
-            <h2 className='border-b-2 border-solid border-sky-600 pb-2 text-2xl dark:border-red-600'>
+            <h2 className='border-b-2 border-solid border-green-600 pb-2 text-2xl dark:border-rose-400'>
                 Profile
             </h2>
             <p className='text-md'>
