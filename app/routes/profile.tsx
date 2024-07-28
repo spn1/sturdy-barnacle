@@ -5,7 +5,7 @@ import Sidebar from '~/components/about/sidebar';
 
 export default function Index() {
     return (
-        <div className='flex flex-col'>
+        <div className='bg-texture flex flex-col'>
             <article className='container mx-auto mb-10 max-w-6xl px-4'>
                 <h1 className='my-10 text-center text-6xl'>Profile</h1>
                 <section className='flex flex-col gap-4 md:flex-row'>

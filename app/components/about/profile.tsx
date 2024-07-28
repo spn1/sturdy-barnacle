@@ -1,9 +1,6 @@
 export default function Profile() {
     return (
-        <div className='flex flex-col gap-4'>
-            <h2 className='border-b-2 border-solid border-green-600 pb-2 text-2xl dark:border-rose-400'>
-                Profile
-            </h2>
+        <div className='flex flex-col gap-4 border-t-2 border-solid border-green-600 pt-4 dark:border-rose-400'>
             <p className='text-md'>
                 A highly focused and dedicated Software Engineer, with a Masters
                 Degree in Physics and Computer Science and 5+ years experience
