@@ -121,7 +121,7 @@ export default function App() {
                         {theme === 'dark' ? '🌞' : '🌙'}
                     </button>
                 </nav>
-                <main id='main' className='h-lvh'>
+                <main id='main' className='bg-texture h-lvh'>
                     {/*  */}
                     <Outlet />
                 </main>
