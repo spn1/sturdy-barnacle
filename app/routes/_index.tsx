@@ -53,9 +53,6 @@ export default function Index() {
                         <Link to='/about'>About Me</Link>
                     </div>
                     <div className='border-stone-200 px-6 dark:border-zinc-800'>
-                        <Link to='/projects'>Portfolio</Link>
-                    </div>
-                    <div className='border-stone-200 px-6 dark:border-zinc-800'>
                         <Link
                             to='https://github.com/spn1'
                             target='_blank'

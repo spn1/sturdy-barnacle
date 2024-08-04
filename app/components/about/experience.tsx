@@ -1,7 +1,7 @@
 export default function Experience() {
     return (
         <div className='flex flex-col gap-6 md:col-span-2 lg:col-span-3'>
-            <h2 className='border-b-2 border-solid border-green-600 pb-2 text-2xl dark:border-rose-400'>
+            <h2 className='border-b-2 border-solid border-green-600 pb-2 text-4xl dark:border-rose-400'>
                 Professional Experience
             </h2>
             <section className='flex flex-col'>
