@@ -5,13 +5,13 @@ import { Waves } from '~/components/home/waves';
 
 export default function Index() {
     return (
-        <div className='flex h-full flex-col justify-stretch'>
-            <header className='bg-hero container mx-auto flex h-1/2 bg-cover bg-clip-border bg-center p-4'>
+        <div className='flex h-svh flex-col justify-stretch'>
+            <header className='container mx-auto flex h-1/2 max-w-screen-xl bg-cover bg-clip-border bg-center p-4'>
                 {/* hero */}
-                <div className='flex h-full w-full flex-col justify-center gap-2 text-center md:w-2/3 md:text-left'>
+                <div className='flex w-full flex-col justify-center gap-2 text-center md:w-2/3 md:text-left'>
                     <p className='maggy text-2xl'>Hello! My name is</p>
                     <h1 className='text-6xl font-bold'>Spencer Newton</h1>
-                    <p className='maggy text-2xl'>Software Engineer</p>
+                    <p className='text-2xl'>Senior Software Engineer</p>
                 </div>
             </header>
             <Waves />

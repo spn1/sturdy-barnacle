@@ -91,38 +91,41 @@ export default function App() {
                 <Meta />
                 <Links />
             </head>
-            <body className='bg-stone-200 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
+            <body className='bg-texture min-h-lvh bg-stone-200 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
                 <nav
-                    className='flex h-14 items-center justify-between p-4'
+                    className='flex h-14 items-center justify-center p-4'
                     id='navbar'
                 >
-                    <NavLink to='/' className='text-xl font-bold'>
-                        Spencer Newton
-                    </NavLink>
-                    <div className='algin-middle flex divide-x text-xl'>
+                    <div className='ml-auto flex divide-x text-xl'>
                         <NavLink
-                            to='/profile'
+                            to='/about'
                             className={
                                 'border-zinc-800 px-6 dark:border-stone-200'
                             }
                         >
-                            Profile
+                            About
                         </NavLink>
-                        <NavLink
+                        <NavLink to='/' className='px-6 text-xl'>
+                            Home
+                        </NavLink>
+                        {/* <NavLink
                             to='/portfolio'
                             className={
                                 'border-zinc-800 px-6 dark:border-stone-200'
                             }
                         >
                             Portfolio
-                        </NavLink>
+                        </NavLink> */}
                     </div>
-                    <button onClick={changeTheme} type='button'>
+                    <button
+                        onClick={changeTheme}
+                        type='button'
+                        className='ml-auto'
+                    >
                         {theme === 'dark' ? '🌞' : '🌙'}
                     </button>
                 </nav>
-                <main id='main' className='bg-texture h-lvh'>
-                    {/*  */}
+                <main id='main' className='min-h-lvh'>
                     <Outlet />
                 </main>
                 <ScrollRestoration />
