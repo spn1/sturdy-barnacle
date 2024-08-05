@@ -105,7 +105,10 @@ export default function App() {
                         >
                             About
                         </NavLink>
-                        <NavLink to='/' className='px-6 text-xl'>
+                        <NavLink
+                            to='/'
+                            className='border-zinc-800 px-6 text-xl dark:border-stone-200'
+                        >
                             Home
                         </NavLink>
                         {/* <NavLink
