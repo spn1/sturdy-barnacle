@@ -93,7 +93,7 @@ export default function App() {
             </head>
             <body className='bg-texture min-h-lvh bg-stone-200 font-sans text-zinc-800 dark:bg-zinc-900 dark:text-stone-200'>
                 <nav
-                    className='flex h-14 items-center justify-center p-4'
+                    className='flex h-14 items-center justify-center bg-stone-200 p-4 dark:bg-zinc-900'
                     id='navbar'
                 >
                     <div className='ml-auto flex divide-x text-xl'>

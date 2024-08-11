@@ -21,7 +21,7 @@ export default function Education() {
                     </div>
                     <span className='justify-self-end'>2010 - 2015</span>
                 </div>
-                <div className='text-lg'>
+                <div className='text-md'>
                     <p>Modules included:</p>
                     <ul className='list-outside list-disc pl-4'>
                         <li>

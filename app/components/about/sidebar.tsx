@@ -9,7 +9,7 @@ export default function Sidebar() {
                 />
                 <div className='flex flex-col gap-2'>
                     <h2 className='text-6xl md:text-4xl'>Spencer Newton</h2>
-                    <p className='text-3xl text-green-600 md:text-xl dark:text-emerald-400'>
+                    <p className='text-3xl text-green-700 md:text-xl dark:text-emerald-400'>
                         Senior Software Engineer
                     </p>
                     <p className='text-3xl text-red-600 md:text-xl dark:text-rose-400'>
@@ -19,11 +19,11 @@ export default function Sidebar() {
             </div>
             <div className='flex flex-col gap-4 sm:flex-row md:flex-col'>
                 <div className='w-full md:w-full'>
-                    <h2 className='mb-2 border-b-2 border-solid border-green-600 pb-2 text-2xl dark:border-rose-400'>
+                    <h2 className='mb-2 border-b-2 border-solid border-green-700 pb-2 text-2xl dark:border-rose-400'>
                         Skills
                     </h2>
                     <ul className='text-md'>
-                        <li>HTML, Javascript, CSS</li>
+                        <li className='highlight'>HTML, Javascript, CSS</li>
                         <li>React, Node, Typescript</li>
                         <li>NextJS, Remix,</li>
                         <li>SASS, Styled Components, Tailwind</li>
@@ -42,10 +42,10 @@ export default function Sidebar() {
                     </ul>
                 </div>
                 <div className='w-full md:w-full'>
-                    <h2 className='mb-2 border-b-2 border-solid border-green-600 pb-2 text-2xl dark:border-rose-400'>
+                    <h2 className='mb-2 border-b-2 border-solid border-green-700 pb-2 text-2xl dark:border-rose-400'>
                         Interests
                     </h2>
-                    <ul className='text-md border-solid border-sky-600 pb-2 md:border-b-2 dark:border-rose-400'>
+                    <ul className='text-md border-solid border-green-700 pb-2 md:border-b-2 dark:border-rose-400'>
                         <li>Web Development</li>
                         <li>Game Development</li>
                         <li className='mb-2'>Graphics Programming</li>

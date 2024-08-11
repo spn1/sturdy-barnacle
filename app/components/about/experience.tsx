@@ -73,7 +73,7 @@ export default function Experience() {
                     </div>
                     <span className='justify-self-end'>2018 - 2022</span>
                 </div>
-                <div className='text-lg'>
+                <div className='text-md'>
                     <p>
                         Front end web developer using Javascript, React, and
                         Node. Developed and maintained the main hub for content
@@ -123,7 +123,7 @@ export default function Experience() {
                     </div>
                     <span className='justify-self-end'>2017 - 2018</span>
                 </div>
-                <div className='text-lg'>
+                <div className='text-md'>
                     <p>
                         Developed complex financial software using different C#,
                         WCF, Excel, and SQL.
