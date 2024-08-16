@@ -7,8 +7,10 @@ export default function Index() {
     return (
         <div className='flex flex-col'>
             <article className='container mx-auto mb-10 max-w-6xl px-4'>
-                <h1 className='my-10 text-center text-6xl'>Profile</h1>
-                <section className='flex flex-col gap-4 rounded-lg bg-stone-200 p-2 md:flex-row dark:bg-zinc-900'>
+                <h1 className='my-10 hidden text-center text-6xl md:block'>
+                    Profile
+                </h1>
+                <section className='mt-4 flex flex-col gap-4 rounded-lg bg-stone-200 p-2 md:flex-row dark:bg-zinc-900'>
                     <div className='relative md:w-1/3'>
                         <Sidebar />
                     </div>

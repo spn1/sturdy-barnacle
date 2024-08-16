@@ -6,13 +6,17 @@ import { Waves } from '~/components/home/waves';
 export default function Index() {
     return (
         <div className='flex h-svh flex-col justify-stretch'>
-            <header className='container mx-auto flex h-1/2 max-w-screen-xl bg-cover bg-clip-border bg-center p-4'>
+            <header className='container mx-auto flex h-1/2 max-w-screen-xl flex-col justify-center p-4 align-middle md:flex-row md:justify-between'>
                 {/* hero */}
-                <div className='flex w-full flex-col justify-center gap-2 text-center md:w-2/3 md:text-left'>
-                    <p className='maggy text-2xl'>Hello! My name is</p>
+                <div className='flex flex-col justify-center gap-2 text-center md:text-left'>
                     <h1 className='text-6xl font-bold'>Spencer Newton</h1>
                     <p className='text-2xl'>Senior Software Engineer</p>
                 </div>
+                {/* <img
+                    src='/monkey-developer.gif'
+                    alt='also me'
+                    className='w-52 rounded-lg object-cover md:size-64'
+                /> */}
             </header>
             <Waves />
             <div className='flex h-1/2 flex-col justify-evenly bg-zinc-800 dark:bg-stone-200'>
@@ -59,6 +63,15 @@ export default function Index() {
                             rel='noreferrer'
                         >
                             Github
+                        </Link>
+                    </div>
+                    <div className='border-stone-200 px-6 dark:border-zinc-800'>
+                        <Link
+                            to='https://www.linkedin.com/in/spencer-newton-85065389/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            LinkedIn
                         </Link>
                     </div>
                 </section>

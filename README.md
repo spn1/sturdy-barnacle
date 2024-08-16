@@ -25,3 +25,17 @@ Then run the app in production mode:
 ```sh
 npm start
 ```
+
+### Docker
+
+Build the docker image:
+
+```sh
+docker build . -t image-name
+```
+
+Run the docker image:
+
+```sh
+docker run -p 3000:3000 -t image-name
+```

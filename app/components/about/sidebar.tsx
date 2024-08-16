@@ -1,18 +1,18 @@
 export default function Sidebar() {
     return (
         <div className='sticky top-10 flex flex-col gap-4 rounded-lg p-2'>
-            <div className='flex flex-row gap-4 md:flex-col'>
+            <div className='flex flex-col gap-4 sm:flex-row md:flex-col'>
                 <img
-                    src='/self-cafe.jpg'
+                    src='/self-museum-cropped.jpeg'
                     alt='me!'
-                    className='float-left size-52 rounded-lg object-cover md:h-96 md:w-full'
+                    className='size-full rounded-lg sm:size-32 md:size-64 md:w-full md:object-cover'
                 />
                 <div className='flex flex-col gap-2'>
-                    <h2 className='text-6xl md:text-4xl'>Spencer Newton</h2>
-                    <p className='text-3xl text-green-700 md:text-xl dark:text-emerald-400'>
+                    <h2 className='text-4xl'>Spencer Newton</h2>
+                    <p className='text-xl text-green-700 md:text-2xl dark:text-emerald-400'>
                         Senior Software Engineer
                     </p>
-                    <p className='text-3xl text-red-600 md:text-xl dark:text-rose-400'>
+                    <p className='text-xl text-red-600 md:text-2xl dark:text-rose-400'>
                         M.Phys Space Science and Robotics
                     </p>
                 </div>

@@ -5,18 +5,18 @@ export default {
     theme: {
         extend: {
             backgroundImage: {
-                'finger-fort': "url('/finger-fort-1.png')",
-                envdiff: "url('/envdiff.png')",
-                psl: "url('/psl-screenshot.png')",
-                'triple-triad': "url('/triple-triad-1.png')",
+                'finger-fort': "url('/finger-fort-bg.png')",
+                envdiff: "url('/envdiff-bg.png')",
+                psl: "url('/psl-bg.png')",
+                'triple-triad': "url('/triple-triad-bg.png')",
             },
             animation: {
                 'modal-fade': 'modal-fade 0.3s ease-in-out',
             },
             keyframes: {
                 'modal-fade': {
-                    '0%': { opacity: '0%' },
-                    '100%': { opcaity: '100%' },
+                    '0%': { opacity: '0%', transform: 'translateY(-10%)' },
+                    '100%': { opcaity: '100%', transform: 'translateY(0%)' },
                 },
             },
         },
