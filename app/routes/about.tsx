@@ -1,7 +1,44 @@
+import { MetaFunction } from '@remix-run/react';
 import Education from '~/components/about/education';
 import Experience from '~/components/about/experience';
 import Profile from '~/components/about/profile';
 import Sidebar from '~/components/about/sidebar';
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: 'Spencer | About' },
+        {
+            property: 'og:title',
+            content: 'Spencer | About',
+        },
+        {
+            name: 'description',
+            content:
+                'A page providing information about work experience, education, and interests of Spencer Newton',
+        },
+        {
+            name: 'og:description',
+            content:
+                'A page providing information about work experience, education, and interests of Spencer Newton',
+        },
+        {
+            name: 'canonical',
+            content: 'https://www.spencernewton.dev/about',
+        },
+        {
+            name: 'og:url',
+            content: 'https://www.spencernewton.dev/about',
+        },
+        {
+            name: 'og:image',
+            content: '/self-museum-cropped.jpeg',
+        },
+        {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1.0',
+        },
+    ];
+};
 
 export default function Index() {
     return (
