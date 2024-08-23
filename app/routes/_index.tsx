@@ -18,7 +18,7 @@ export default function Index() {
             </header>
             <Waves />
             <div className='flex h-1/2 flex-col justify-evenly bg-zinc-800 dark:bg-stone-200'>
-                <section className='container mx-auto grid max-w-screen-xl grid-cols-1 justify-center gap-4 p-4 py-10 text-xl sm:grid-cols-2 md:grid-cols-3'>
+                <section className='container mx-auto grid max-w-screen-md grid-cols-1 justify-center gap-4 p-4 py-10 text-xl sm:grid-cols-2'>
                     <div className='rounded-xl bg-stone-200 p-6 text-zinc-800 shadow-lg shadow-zinc-600 dark:bg-zinc-800 dark:text-stone-200 dark:shadow-stone-500'>
                         <p>
                             <span className='font-bold text-red-600 dark:text-rose-400'>
