@@ -10,11 +10,6 @@ export default function Index() {
                     <h1 className='text-6xl font-bold'>Spencer Newton</h1>
                     <p className='text-2xl'>Senior Software Engineer</p>
                 </div>
-                {/* <img
-                    src='/monkey-developer.gif'
-                    alt='also me'
-                    className='w-52 rounded-lg object-cover md:size-64'
-                /> */}
             </header>
             <Waves />
             <div className='flex h-1/2 flex-col justify-evenly bg-zinc-800 dark:bg-stone-200'>

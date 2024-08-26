@@ -1,5 +1,11 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type {
+    LinksFunction,
+    LoaderFunctionArgs,
+    MetaFunction,
+} from '@remix-run/node';
+import { json } from '@remix-run/node';
 import {
+    useLoaderData,
     NavLink,
     Links,
     Meta,
@@ -7,11 +13,11 @@ import {
     Scripts,
     ScrollRestoration,
 } from '@remix-run/react';
-import { useState, useCallback, useEffect } from 'react';
 
 import appStyles from '~/app.css?url';
 import tailwindStyles from '~/tailwind.css?url';
 import customStyles from '~/styles/_index.css?url';
+import useTheme from './hooks/useTheme';
 
 export const links: LinksFunction = () => [
     { rel: 'stylesheet', href: tailwindStyles },
@@ -37,9 +43,20 @@ export const links: LinksFunction = () => [
  * isn't used to render the UI is removed from the browser bundle.
  * @param param Loader Function Arguments
  */
-// export const loader = async ({ request }: LoaderFunctionArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+    const cookies = request.headers.get('Cookie') as string;
+    const themeCookie = cookies
+        .split('; ')
+        .filter((cookie) => cookie.includes('theme'));
 
-// }
+    if (themeCookie.length !== 1) {
+        return json({ theme: 'light' });
+    }
+
+    const theme = themeCookie[0].split('=')[1];
+
+    return json({ theme });
+};
 
 export const meta: MetaFunction = () => {
     return [
@@ -82,23 +99,8 @@ export const meta: MetaFunction = () => {
  * @returns The template component for the application
  */
 export default function App() {
-    const [theme, setTheme] = useState('light');
-
-    useEffect(() => {
-        if (window !== undefined && sessionStorage !== undefined) {
-            setTheme(
-                window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? 'dark'
-                    : sessionStorage.getItem('theme') || 'light'
-            );
-        }
-    }, []);
-
-    const changeTheme = useCallback(() => {
-        theme === 'light' ? setTheme('dark') : setTheme('light');
-
-        sessionStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
-    }, [theme]);
+    const loaderData = useLoaderData<typeof loader>();
+    const [theme, toggleTheme] = useTheme(loaderData?.theme);
 
     return (
         <html className={theme} lang='en'>
@@ -141,7 +143,7 @@ export default function App() {
                         </NavLink> */}
                     </div>
                     <button
-                        onClick={changeTheme}
+                        onClick={toggleTheme}
                         type='button'
                         className='ml-auto'
                     >
