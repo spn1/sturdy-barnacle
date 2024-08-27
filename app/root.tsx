@@ -46,10 +46,10 @@ export const links: LinksFunction = () => [
 export const loader = async ({ request }: LoaderFunctionArgs) => {
     const cookies = request.headers.get('Cookie') as string;
     const themeCookie = cookies
-        .split('; ')
-        .filter((cookie) => cookie.includes('theme'));
+        ?.split('; ')
+        ?.filter((cookie) => cookie.includes('theme'));
 
-    if (themeCookie.length !== 1) {
+    if (!themeCookie || themeCookie.length !== 1) {
         return json({ theme: 'light' });
     }
 
