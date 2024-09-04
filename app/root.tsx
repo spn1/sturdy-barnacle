@@ -3,7 +3,7 @@ import type {
     LoaderFunctionArgs,
     MetaFunction,
 } from '@remix-run/node';
-import { json } from '@remix-run/node';
+import { json, logDevReady } from '@remix-run/node';
 import {
     useLoaderData,
     NavLink,
@@ -26,38 +26,9 @@ export const links: LinksFunction = () => [
 ];
 
 /**
- * The function that runs when an action is taken on the page. This is a
- * server-only function that handles mutations and fetches. If a non-GET
- * request is made, the action is called before the `loader`.
- * i.e. Form submit, search query, etc
+ * Provides metadata that is used to populate the head of the document.
+ * @returns The metadata for the page
  */
-// export const action = async ({ request }: ActionFunctionArgs) => {
-
-// }
-
-/**
- * The function that runs when the page is loaded. It can be used to provide data
- * to the route when rendering. It is only ever run on the server, but when a
- * navigation occurs on the browser, Remix calls this function with `fetch` from
- * the client. This can technically contain server secrets, as any code that
- * isn't used to render the UI is removed from the browser bundle.
- * @param param Loader Function Arguments
- */
-export const loader = async ({ request }: LoaderFunctionArgs) => {
-    const cookies = request.headers.get('Cookie') as string;
-    const themeCookie = cookies
-        ?.split('; ')
-        ?.filter((cookie) => cookie.includes('theme'));
-
-    if (!themeCookie || themeCookie.length !== 1) {
-        return json({ theme: 'light' });
-    }
-
-    const theme = themeCookie[0].split('=')[1];
-
-    return json({ theme });
-};
-
 export const meta: MetaFunction = () => {
     return [
         { title: 'Spencer Newton' },
@@ -90,6 +61,42 @@ export const meta: MetaFunction = () => {
             content: 'width=device-width, initial-scale=1.0',
         },
     ];
+};
+
+/**
+ * The function that runs when an action is taken on the page. This is a
+ * server-only function that handles mutations and fetches. If a non-GET
+ * request is made, the action is called before the `loader`.
+ * i.e. Form submit, search query, etc
+ */
+// export const action = async ({ request }: ActionFunctionArgs) => {
+
+// }
+
+/**
+ * The function that runs when the page is loaded. It can be used to provide data
+ * to the route when rendering. It is only ever run on the server, but when a
+ * navigation occurs on the browser, Remix calls this function with `fetch` from
+ * the client. This can technically contain server secrets, as any code that
+ * isn't used to render the UI is removed from the browser bundle.
+ * @param param Loader Function Arguments
+ */
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+    const cookies = request.headers.get('Cookie') as string;
+    const themeCookie = cookies
+        ?.split('; ')
+        ?.filter((cookie) => cookie.includes('theme'));
+
+    console.log('ThemeCookie: ', themeCookie);
+
+    if (!themeCookie || themeCookie.length !== 1) {
+        return json({ theme: 'light' });
+    }
+
+    const theme = themeCookie[0]?.split('=')[1];
+
+    console.log('Theme: ', theme);
+    return json({ theme });
 };
 
 /**

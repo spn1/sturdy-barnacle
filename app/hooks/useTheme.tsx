@@ -3,13 +3,11 @@ import { useState, useEffect, useCallback } from 'react';
 export default (initialTheme: string) => {
     const [theme, setTheme] = useState<string>(initialTheme);
 
+    console.log('InitialTheme: ', initialTheme);
+    console.log('Theme: ', theme);
+
     useEffect(() => {
-        if (window !== undefined && sessionStorage !== undefined) {
-            const initialTheme = window.matchMedia(
-                '(prefers-color-scheme: dark)'
-            ).matches
-                ? 'dark'
-                : 'light';
+        if (window !== undefined) {
             setTheme(initialTheme);
             document.cookie = `theme=${initialTheme}`;
         }
