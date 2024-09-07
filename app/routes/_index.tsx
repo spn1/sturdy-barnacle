@@ -5,10 +5,12 @@ import { Waves } from '~/components/home/waves';
 export default function Index() {
     return (
         <div className='flex h-svh flex-col justify-stretch'>
-            <header className='container mx-auto flex h-1/2 max-w-screen-xl flex-col justify-center p-4 align-middle md:flex-row md:justify-between'>
-                <div className='flex flex-col justify-center gap-2 text-center md:text-left'>
-                    <h1 className='text-6xl font-bold'>Spencer Newton</h1>
-                    <p className='text-2xl'>Senior Software Engineer</p>
+            <header className='container mx-auto flex h-1/2 max-w-screen-xl flex-col justify-center p-4 align-middle md:flex-row'>
+                <div className='flex flex-col justify-center gap-2 text-center'>
+                    <h1 className='text-6xl font-bold'>
+                        Spencer Newton <span className='wave text-6xl'>👋</span>
+                    </h1>
+                    <p className='text-4xl'>Senior Software Engineer</p>
                 </div>
             </header>
             <Waves />
