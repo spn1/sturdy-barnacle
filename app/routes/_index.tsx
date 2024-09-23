@@ -43,9 +43,8 @@ export default function Index() {
                             and am interested in all things space and tech.
                             I&apos;m a lover of video games and particularly
                             enjoy learning how they work from a programming
-                            perspective. To keep myself healthy I like to go
-                            running, use the gym, and frequent the local
-                            climbing wall.
+                            perspective. I&apos;m currently working at Sky in
+                            Leeds, but am open to other opportunities.
                         </p>
                     </div>
                 </section>
