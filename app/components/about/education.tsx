@@ -7,7 +7,7 @@ export default function Education() {
             <section>
                 <div className='flex gap-4 align-middle'>
                     <img
-                        src='/aber-shield-color.png'
+                        src='/img/aber-shield-color.png'
                         alt='sky logo'
                         className='float-left h-20 pb-2 pl-2'
                     />

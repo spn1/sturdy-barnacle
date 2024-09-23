@@ -3,7 +3,7 @@ export default function Sidebar() {
         <div className='sticky top-10 flex flex-col gap-4 rounded-lg p-2'>
             <div className='flex flex-col gap-4 sm:flex-row md:flex-col'>
                 <img
-                    src='/self-museum-cropped.jpeg'
+                    src='/img/self-museum-cropped.jpeg'
                     alt='me!'
                     className='size-full rounded-lg sm:size-32 md:size-64 md:w-full md:object-cover'
                 />

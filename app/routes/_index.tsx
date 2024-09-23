@@ -12,7 +12,7 @@ export default function Index() {
                 </div>
             </header>
             <div className='flex h-1/2 flex-col justify-evenly'>
-                <section className='container mx-auto grid h-full grid-cols-1 gap-4 p-4 py-10 text-xl sm:grid-cols-2'>
+                <section className='container mx-auto grid max-w-screen-lg grid-cols-1 gap-4 p-4 py-10 text-xl sm:grid-cols-2'>
                     <div className='h-full bg-stone-200 p-6 text-zinc-800 dark:bg-zinc-800 dark:text-stone-200'>
                         <p>
                             I&apos;m a{' '}
@@ -41,10 +41,11 @@ export default function Index() {
                                 Science
                             </span>{' '}
                             and am interested in all things space and tech.
-                            I&apos;m a lover of video games and have enjoy
-                            learning how they work from a code perspective. To
-                            keep myself healthy I like to go running, use the
-                            gym, and frequent the local climbing wall.
+                            I&apos;m a lover of video games and particularly
+                            enjoy learning how they work from a programming
+                            perspective. To keep myself healthy I like to go
+                            running, use the gym, and frequent the local
+                            climbing wall.
                         </p>
                     </div>
                 </section>
@@ -56,7 +57,6 @@ export default function Index() {
                             rel='noreferrer'
                         >
                             Github
-                            <Icon icon='github' />
                         </Link>
                     </div>
                     <div className='border-zinc-800 px-6 dark:border-stone-200'>
@@ -66,8 +66,7 @@ export default function Index() {
                             rel='noreferrer'
                             className='flex flex-row'
                         >
-                            <span>LinkedIn</span>
-                            <Icon icon='linkedIn' />
+                            LinkedIn
                         </Link>
                     </div>
                 </section>

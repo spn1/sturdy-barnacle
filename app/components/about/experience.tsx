@@ -7,7 +7,7 @@ export default function Experience() {
             <section className='flex flex-col'>
                 <div className='flex gap-4'>
                     <img
-                        src='/sky-logo-small-rgb-128x128.png'
+                        src='/img/sky-logo-small-rgb-128x128.png'
                         alt='sky logo'
                         className='float-left size-16'
                     />
@@ -63,7 +63,7 @@ export default function Experience() {
             <section>
                 <div className='flex gap-4'>
                     <img
-                        src='/sky-logo-small-rgb-128x128.png'
+                        src='/img/sky-logo-small-rgb-128x128.png'
                         alt='sky logo'
                         className='float-left size-16'
                     />
@@ -111,7 +111,7 @@ export default function Experience() {
             <section>
                 <div className='flex gap-4'>
                     <img
-                        src='/credit-suisse-logo-256x256.png'
+                        src='/img/credit-suisse-logo-256x256.png'
                         alt='sky logo'
                         className='float-left size-16'
                     />
