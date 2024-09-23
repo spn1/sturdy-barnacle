@@ -23,7 +23,7 @@ export default function Sidebar() {
                         Skills
                     </h2>
                     <ul className='text-md'>
-                        <li className='highlight'>HTML, Javascript, CSS</li>
+                        <li>HTML, Javascript, CSS</li>
                         <li>React, Node, Typescript</li>
                         <li>NextJS, Remix,</li>
                         <li>SASS, Styled Components, Tailwind</li>

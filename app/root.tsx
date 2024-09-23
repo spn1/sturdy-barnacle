@@ -87,15 +87,12 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
         ?.split('; ')
         ?.filter((cookie) => cookie.includes('theme'));
 
-    console.log('ThemeCookie: ', themeCookie);
-
     if (!themeCookie || themeCookie.length !== 1) {
         return json({ theme: 'light' });
     }
 
     const theme = themeCookie[0]?.split('=')[1];
 
-    console.log('Theme: ', theme);
     return json({ theme });
 };
 
