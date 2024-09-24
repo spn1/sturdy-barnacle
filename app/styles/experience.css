@@ -1,0 +1,33 @@
+.fade-out-experience {
+    pointer-events: none;
+}
+
+.fade-out-experience > * {
+    pointer-events: auto;
+    transition: 300ms opacity;
+}
+
+.fade-out-experience:hover > * {
+    opacity: 0.4;
+}
+
+.fade-out-experience:hover > *:hover {
+    opacity: 1;
+}
+
+.fade-out-skills {
+    pointer-events: none;
+}
+
+.fade-out-skills > * {
+    pointer-events: auto;
+    transition: 300ms opacity;
+}
+
+.fade-out-skills > :not(.show) {
+    opacity: 0.4;
+}
+
+.fade-out-skills > .show {
+    opacity: 1;
+}
