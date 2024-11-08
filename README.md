@@ -1,6 +1,6 @@
-# Remix Portfolio
+# Personal Website
 
--   [Remix Docs](https://remix.run/docs)
+A personal website for myself, made using Remix & React.
 
 ## Development
 
