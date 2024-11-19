@@ -3,7 +3,7 @@ import type {
     LoaderFunctionArgs,
     MetaFunction,
 } from '@remix-run/node';
-import { json, logDevReady } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import {
     useLoaderData,
     NavLink,

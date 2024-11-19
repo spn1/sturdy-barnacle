@@ -39,15 +39,16 @@ export default function Experience({
                                     India.
                                 </li>
                                 <li>
-                                    Collaborated with engineers in other teams
-                                    in setting up a stubbing framework to
-                                    facilitate API mocking for this new product,
-                                    as the external APIs couldnt be utilized in
-                                    a development environment.
+                                    Worked with engineers in other teams to set
+                                    up the infrastructure to enable API mocking,
+                                    as the new product&apos;s external APIs
+                                    couldnt be utilized in a development
+                                    environment.
                                 </li>
                                 <li>
                                     Organized the implementation of automation
-                                    testing into the team.
+                                    testing into the team using playwright and
+                                    percy.
                                 </li>
                                 <li>
                                     Collaborated with business analysts and
@@ -58,10 +59,6 @@ export default function Experience({
                                 <li>
                                     Mentored other junior engineers in the team
                                     on software development best practices.
-                                </li>
-                                <li>
-                                    Assisted in developing a new billing page
-                                    for Sky mobile customers.
                                 </li>
                             </ul>
                         </div>
@@ -87,7 +84,7 @@ export default function Experience({
                             <li>
                                 Collaborated with other developers to implement
                                 features for the Sky customer help website.
-                                Included maintaining some back-end serrvices to
+                                Included maintaining some back-end services to
                                 augment the web application.
                             </li>
                             <li>
@@ -129,7 +126,7 @@ export default function Experience({
                     <div className='text-md'>
                         <ul className='list-outside list-disc pl-4'>
                             <li>
-                                Worked on augmenting software procided by an
+                                Worked on augmenting software provided by an
                                 external software company.
                             </li>
                             <li>
@@ -145,7 +142,7 @@ export default function Experience({
                                 co-workers using the scrum methodology.
                             </li>
                             <li>
-                                Carefully handles confidential data that could
+                                Carefully handled confidential data that could
                                 not leave Switzerland or the Bank.
                             </li>
                         </ul>
