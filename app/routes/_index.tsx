@@ -1,5 +1,4 @@
 import { Link } from '@remix-run/react';
-import { Icon } from '~/components/shared/icon';
 
 export default function Index() {
     return (

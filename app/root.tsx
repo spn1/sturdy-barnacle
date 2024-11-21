@@ -87,8 +87,10 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
         ?.split('; ')
         ?.filter((cookie) => cookie.includes('theme'));
 
+    console.log(`🚨 [root.tsx] theme cookie: `, themeCookie);
+
     if (!themeCookie || themeCookie.length !== 1) {
-        return json({ theme: 'light' });
+        return json({ theme: 'dark' });
     }
 
     const theme = themeCookie[0]?.split('=')[1];
@@ -137,14 +139,6 @@ export default function App() {
                         >
                             Home
                         </NavLink>
-                        {/* <NavLink
-                            to='/portfolio'
-                            className={
-                                'border-zinc-800 px-6 dark:border-stone-200'
-                            }
-                        >
-                            Portfolio
-                        </NavLink> */}
                     </div>
                     <button
                         onClick={toggleTheme}

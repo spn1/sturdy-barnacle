@@ -16,7 +16,7 @@ export default {
             keyframes: {
                 'modal-fade': {
                     '0%': { opacity: '0%', transform: 'translateY(-10%)' },
-                    '100%': { opcaity: '100%', transform: 'translateY(0%)' },
+                    '100%': { opacity: '100%', transform: 'translateY(0%)' },
                 },
             },
         },
