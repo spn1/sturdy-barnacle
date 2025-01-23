@@ -31,6 +31,12 @@ export default function Experience({
                     </div>
                     <div>
                         <div className='text-md'>
+                            <p>
+                                Senior Software Engineer using React,
+                                Typescript, and Graphql. Involved leading a team
+                                that worked on various product settings and
+                                billing journeys for sky.com
+                            </p>
                             <ul className='list-outside list-disc pl-4'>
                                 <li>
                                     Led the development of a series of product
@@ -39,26 +45,24 @@ export default function Experience({
                                     India.
                                 </li>
                                 <li>
-                                    Worked with engineers in other teams to set
-                                    up the infrastructure to enable API mocking,
-                                    as the new product&apos;s external APIs
-                                    couldnt be utilized in a development
-                                    environment.
-                                </li>
-                                <li>
                                     Organized the implementation of automation
                                     testing into the team using playwright and
                                     percy.
                                 </li>
                                 <li>
-                                    Collaborated with business analysts and
-                                    product owners to analyze requirements,
-                                    refine tickets, and deliver frequent
-                                    application updates.
+                                    Worked with business analysts and product
+                                    owners to plan projects, analyze
+                                    requirements, refine tickets, and deliver
+                                    frequent application updates to project
+                                    management.
                                 </li>
                                 <li>
                                     Mentored other junior engineers in the team
                                     on software development best practices.
+                                </li>
+                                <li>
+                                    Developed new features alongside developers
+                                    in both front-end and back-end systems.
                                 </li>
                             </ul>
                         </div>
@@ -80,16 +84,30 @@ export default function Experience({
                         <span className='justify-self-end'>2018 - 2022</span>
                     </div>
                     <div className='text-md'>
+                        <p>
+                            Front end web developer using Javascript, React, and
+                            Node. Developed and maintained the main hub for
+                            content to help both customers and call-center
+                            agents diagnose and fix issues.
+                        </p>
                         <ul className='list-outside list-disc pl-4'>
                             <li>
                                 Collaborated with other developers to implement
                                 features for the Sky customer help website.
-                                Included maintaining some back-end services to
-                                augment the web application.
+                                Included developing backend Node REST APIs and
+                                frontend React applications.
                             </li>
                             <li>
                                 Worked to deadlines using agile methodologies
                                 (scrum and kanban).
+                            </li>
+                            <li>
+                                Participated in code reviews and the release
+                                process.
+                            </li>
+                            <li>
+                                Ensured that all features met accessibility
+                                requirements.
                             </li>
                             <li>
                                 Helped investigate and fix bugs within the
@@ -101,9 +119,10 @@ export default function Experience({
                                 to showcase progress of large projects.
                             </li>
                             <li>
-                                In self-development time, developed a custom
+                                In self-development time, I created a custom
                                 tool to help content editors search for content
-                                in a more refined way.
+                                in a more refined way, which I eventually
+                                delivered as an internal product.
                             </li>
                         </ul>
                     </div>

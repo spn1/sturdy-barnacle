@@ -23,12 +23,12 @@ export default function Index() {
                             modern technology, with a focus on web development
                             using React, Typescript, and Node. Feel free to hop
                             on over to my{' '}
-                            <a
+                            <Link
                                 className='text-emerald-500 underline dark:text-emerald-400'
-                                href='/about'
+                                to='/about'
                             >
                                 About
-                            </a>{' '}
+                            </Link>{' '}
                             page to learn more about my experience.
                         </p>
                     </div>

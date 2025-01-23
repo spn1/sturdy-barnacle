@@ -87,8 +87,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
         ?.split('; ')
         ?.filter((cookie) => cookie.includes('theme'));
 
-    console.log(`🚨 [root.tsx] theme cookie: `, themeCookie);
-
     if (!themeCookie || themeCookie.length !== 1) {
         return json({ theme: 'dark' });
     }
@@ -105,8 +103,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
  * @returns The template component for the application
  */
 export default function App() {
-    const loaderData = useLoaderData<typeof loader>();
-    const [theme, toggleTheme] = useTheme(loaderData?.theme);
+    // const loaderData = useLoaderData<typeof loader>();
+    const [theme] = useTheme('light');
 
     return (
         <html className={theme} lang='en'>
@@ -124,7 +122,7 @@ export default function App() {
                     className='flex h-14 items-center justify-center bg-stone-200 p-4 dark:bg-zinc-900'
                     id='navbar'
                 >
-                    <div className='ml-auto flex divide-x text-xl'>
+                    <div className='mx-auto flex divide-x text-xl'>
                         <NavLink
                             to='/about'
                             className={
@@ -140,13 +138,13 @@ export default function App() {
                             Home
                         </NavLink>
                     </div>
-                    <button
+                    {/* <button
                         onClick={toggleTheme}
                         type='button'
                         className='ml-auto'
                     >
                         {theme === 'dark' ? '🌞' : '🌙'}
-                    </button>
+                    </button> */}
                 </nav>
                 <main id='main' className='min-h-lvh'>
                     <Outlet />

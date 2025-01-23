@@ -11,31 +11,42 @@ type Experience = {
 const skills: Skills = {
     languages: [
         'HTML',
-        'Javascript',
         'CSS',
+        'Javascript',
         'React',
         'Node',
         'Typescript',
         'NextJS',
         'Remix',
-        'SASS',
         'Styled Components',
+        'SASS',
         'Tailwind',
         'GraphQL',
-        'REST',
+        'REST APIs',
         'SQL',
+        'Postgresql',
         'Docker',
     ],
     meta: [
         'Teamcity',
         'Concourse',
         'Octopus',
+        'GCP',
+        'Cloud Run',
+        'Cloud Build',
+        'Cloud SQL',
+        'Firebase',
         'CMS Systems (Contentstack)',
         'PaaS Systems (Cloudfoundry)',
         'Test Driven Development',
+        'Jest',
+        'React Testing Library',
+        'Playwright',
+        'Percy',
         'Project Planning',
         'Technical Leadership',
         'Software Design',
+        'Safe 6',
     ],
     other: [
         'C',
@@ -63,17 +74,29 @@ const experience: Experience = {
         'Node',
         'Typescript',
         'Styled Components',
+        'SASS',
         'GraphQL',
+        'Postgresql',
         'REST',
+        'NextJS',
         'Docker',
         'Concourse',
         'Octopus',
+        'GCP',
+        'Cloud Run',
+        'Cloud Build',
+        'Cloud SQL',
         'CMS Systems (Contentstack)',
         'PaaS Systems (Cloudfoundry)',
         'Test Driven Development',
+        'Jest',
+        'React Testing Library',
+        'Playwright',
+        'Percy',
         'Project Planning',
         'Technical Leadership',
         'Software Design',
+        'Safe 6',
     ],
     'sky-dev': [
         'HTML',
@@ -81,12 +104,19 @@ const experience: Experience = {
         'CSS',
         'React',
         'Node',
-        'REST',
+        'REST APIs',
+        'Styled Components',
+        'Postgresql',
+        'SASS',
         'Teamcity',
         'Octopus',
         'CMS Systems (Contentstack)',
         'PaaS Systems (Cloudfoundry)',
         'Test Driven Development',
+        'Jest',
+        'React Testing Library',
+        'Docker',
+        'GraphQL',
     ],
     fdm: ['SQL', 'C#', '.Net', 'Teamcity'],
 };
@@ -148,9 +178,9 @@ export default function Sidebar({ hovered }: { hovered: string | null }) {
                         Interests
                     </h2>
                     <ul className='text-md border-solid border-green-700 pb-2 md:border-b-2 dark:border-rose-400'>
-                        <li>Web Development</li>
-                        <li>Game Development</li>
-                        <li className='mb-2'>Graphics Programming</li>
+                        <li>Software Engineering</li>
+                        <li>Technical Design</li>
+                        <li className='mb-2'>Game Development</li>
                         <li>Video Games</li>
                         <li>Climbing / Bouldering</li>
                         <li>Running / Hiking</li>
